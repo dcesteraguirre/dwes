@@ -17,6 +17,30 @@
     else{
         echo "<br><h2>No has introducido ningun autor</h2>";
     }
+
+    if(isset($_GET['titulolibro']) && !empty($_GET["titulolibro"]) ){
+        $titulo = $_GET['titulolibro'];
+        echo "<br> El titulo del libro introducido es : " . $titulo;
+    }
+    else{
+        echo "<br><h2>No has introducido ningun titulo de libro</h2>";
+    }
+
+    if(isset($_GET['editorial']) && !empty($_GET["editorial"]) ){
+        $editorial = $_GET['editorial'];
+        echo "<br> El nombre de la ediotrial es : " . $editorial;
+    }
+    else{
+        echo "<br><h2>No has introducido ninguna editorial</h2>";
+    }
+
+    if(isset($_GET['numero']) && !empty($_GET["numero"]) ){
+        $numero = $_GET['numero'];
+        echo "<br> El numero introducido es : " . $numero;
+    }
+    else{
+        echo "<br><h2>No has introducido ningun número</h2>";
+    }
     ?>
     
 </body>

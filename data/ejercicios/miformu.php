@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Formulario</h1>
-    <form name ="miformu" action="autoriza.php" method="GET">
+    <form name="miformu" action="autoriza.php" method="GET">
         <p>
             <label for="nombre">Introduce Nombre: </label>
             <input type="text" name="nombreusu" id="nombreusu">
@@ -41,11 +43,9 @@
             </select>
         </p>
 
-        <p> Elige tu plato favorito(SELECT MULTIPLE):</p>
+        <p> Elige tus platos favorito(SELECT MULTIPLE):</p>
         <p>
-            <label for="plato1">Codillo asado</label>
-            <!-- select>option*4 -->
-            <select name="menusm[]" id="menus" multiple=5>
+            <select name="menusm[]" id="menus" multiple=5 required>
                 <option value="codillo">Codilllo Asado</option>
                 <option value="ensalada">Ensalada Cesar</option>
                 <option value="macarrones">Macarrones con tomate</option>
@@ -57,7 +57,14 @@
             <input type="checkbox" name="asignaturas" id="asignatura1" value="PHP">
 
         </p>
+
+
+        <input type="hidden" name="ip" value="<?= $_SERVER['SERVER_ADDR'] ?>">
+
+
+
         <input type="submit" name="envio" id="envio" value="Enviah">
     </form>
 </body>
+
 </html>
